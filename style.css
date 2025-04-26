@@ -1,0 +1,116 @@
+/* styles.css */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.calculator {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 380px;
+}
+
+.display {
+  width: 100%;
+  height: 80px;
+  font-size: 3rem;
+  text-align: right;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: #fafafa;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.btn {
+  font-size: 2rem;
+  border-radius: 15px;
+  background-color: #f2f2f2;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  height: 100px; /* ボタンの高さを統一 */
+  width: 100px;  /* 横幅を固定して統一 */
+  align-items: center; /* テキストを中央に配置 */
+}
+
+.btn:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+.btn:active {
+  background-color: #d4d4d4;
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn.operator {
+  background-color: #ff6f61;
+  color: white;
+}
+
+.btn.operator:hover {
+  background-color: #e55f51;
+}
+
+.btn.equal {
+  background-color: #4caf50;
+  color: white;
+  width: 150px; /* '=' ボタンを他のボタンより広く */
+}
+
+.btn.equal:hover {
+  background-color: #45a249;
+}
+
+.btn.clear {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn.clear:hover {
+  background-color: #e53935;
+}
+
+@media (max-width: 400px) {
+  .calculator {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .display {
+    font-size: 2.5rem;
+  }
+
+  .btn {
+    padding: 25px;
+    font-size: 1.8rem;
+    width: 60px; /* 小さな画面用のボタン幅調整 */
+    height: 60px;
+  }
+
+  .btn.equal {
+    width: 120px; /* 小さな画面での '=' ボタンサイズ調整 */
+  }
+}
